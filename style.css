@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@keyframes arkaplananimasyon {
+    0%{
+        background-position: 0% 100%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    100%{
+        background-position: 0% 100%;
+    }
+}
+body, html{
+    width:100%;
+    height:100%;
+    margin:0px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(13, 13, 15); 
+}
+::-webkit-scrollbar-thumb {
+    background: white; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #c4c4c4; 
+    transition-duration: 1s;
+}
+body{
+    background-image: linear-gradient(150deg,rgb(25, 25, 27),rgb(18, 18, 20) 40%);
+}
+.ustcizgi{
+    background: linear-gradient(90deg,#ef32d9,#89fffd,#ef32d9);
+    background-size:400%;
+    animation: arkaplananimasyon 6s infinite;
+    width:100%;
+    height:0.5%;
+    box-shadow: 0px 3px 10px rgb(13, 13, 16);
+}
+nav{
+    width:100%;
+    height:25%;
+}
+button.home{
+    all:none;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    border:none;
+    color:white;
+    font-size:200%;
+    font-weight: 100;
+    width:fit-content;
+    height: 1.35em;
+    float:right;
+    padding:0% 3%;
+    margin:8% 13% 0% 0%;
+    transition-duration: 0.25s;
+}
+button.home:hover{
+    background-color: rgb(13, 13, 15);
+    transition-duration: 0.25s;
+    box-shadow:0px 0px 10px black;
+    cursor:pointer;
+}
+button.home:active{
+    box-shadow:0px 0px 2px black; 
+}
+button.projects{
+    all:none;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    border:none;
+    color:white;
+    font-size:200%;
+    font-weight: 100;
+    width:fit-content;
+    height: 1.35em;
+    float:right;
+    padding:0% 2.5%;
+    margin:8% 1% 0% 0%;
+    transition-duration: 0.25s;
+}
+button.projects:hover{
+    background-color: rgb(13, 13, 15);
+    transition-duration: 0.25s;
+    box-shadow:0px 0px 10px black;
+    cursor:pointer;
+}
+button.projects:active{
+    box-shadow:0px 0px 2px black; 
+}
+.whoami{
+    width:30%;
+    color:rgb(192, 192, 192);
+    margin:0% 0% 0% 15%;
+    float:left;
+}
+.whoami-t{
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    color:rgb(231, 231, 231);
+    font-size:25px;
+    width:100%;
+    padding-bottom:4%;
+}
+.whoami-c{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    font-size:16px;
+}
+img.logolar{
+    vertical-align: middle;
+    padding-right:3%;
+    width:50px;
+}
+.contact{
+    width:20%;
+    color:rgb(192, 192, 192);
+    margin:0% 0% 0% 3%;
+    float:left;
+}
+.contact-t{
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    color:rgb(231, 231, 231);
+    font-size:25px;
+    width:100%;
+    margin-bottom: 5%;
+}
+.contact-instagram{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    transition-duration: 0.25s;
+}
+.contact-instagram:hover{
+    background-color: rgb(13, 13, 15);
+    transition-duration: 0.25s;
+    box-shadow:0px 0px 10px black;
+    cursor:pointer;
+}
+.contact-instagram:active{
+    box-shadow:0px 0px 2px black; 
+}
+.contact-discord{
+    margin: 2% 0% 2% 0%;
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    transition-duration: 0.25s;
+}
+.contact-discord:hover{
+    background-color: rgb(13, 13, 15);
+    transition-duration: 0.25s;
+    box-shadow:0px 0px 10px black;
+    cursor:pointer;
+}
+.contact-discord:active{
+    box-shadow:0px 0px 2px black; 
+}
+.contact-linkedin{
+    font-family: 'Roboto', sans-serif;
+    font-weight:300;
+    transition-duration: 0.25s;
+}
+.contact-linkedin:hover{
+    background-color: rgb(13, 13, 15);
+    transition-duration: 0.25s;
+    box-shadow:0px 0px 10px black;
+    cursor:pointer;
+}
+.contact-linkedin:active{
+    box-shadow:0px 0px 2px black; 
+}
+.things{
+    width:30%;
+    height:35%;
+    color:rgb(192, 192, 192);
+    margin:2% 40% 0% 15%;
+    float:left;
+}
+.things-t{
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    color:rgb(231, 231, 231);
+    font-size:25px;
+    width:100%;
+    margin-bottom: 5%;
+}
+.things-c{
+    height:100%;
+}
+table{
+    table-layout: fixed;
+    width:230%;
+    height:75%;
+}
+td{
+    background-color: rgb(13, 13, 15);
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;
+    font-weight:300;
+    border-radius:5px;
+    text-align: left;
+    transition-duration:0.5s;
+}
+td:hover{
+    transition-duration: 0.5s;
+    padding-left:5%;
+}
+td.pr:hover{
+    background-color: rgb(0,1,90);
+}
+td.ae:hover{
+    background-color: rgb(0,1,90);
+}
+td.ps:hover{
+    background-color: rgb(1,24,53);
+}
+td.html:hover{
+    background-color: rgb(228,76,39);
+    color:white;
+}
+td.css:hover{
+    background-color: rgb(20,114,183);
+    color:white;
+}
+td.py:hover{
+    background-color:rgb(216, 175, 53);
+    color:black;
+}
+td.kali:hover{
+    background-color: rgb(236,236,237);
+    color:black;
+}
+td.nmap:hover{
+    background-color: rgb(100,150,190);
+    color:white;
+}
+td.ac:hover{
+    background-color: rgb(31,31,36);
+    color:white;
+}
+td.ms:hover{
+    background-color: rgb(12,120,185);
+    color:White;
+}
+td.bc:hover{
+    background-color: rgb(54,60,67);
+    color:white;
+}
+td.ws:hover{
+    background-color: rgb(40,98,162);
+    color:White;
+}
+/*------------------------------PROJECTS SAYFASI-------------------------------*/
+.projects-content{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:100%;
+    font-weight:300;
+    text-align:center;
+    padding:12.5% 10% 0% 10%;
+}
+/*----------------------------TABLET COZUNURLUGU------------------------------*/
+@media screen and (min-width:601px) and (max-width:1200px){
+    body{
+        background-image:linear-gradient(90deg,rgb(25, 25, 27),rgb(18, 18, 20) 40%);
+    }
+    button.home{
+        margin:8% 5% 0% 0%;
+    }
+    button.projects{
+        margin-right:0%;
+    }
+    .whoami{
+        width:50%;
+        margin:0% 0% 0% 5%;
+    }
+    .contact{
+        width:35%;
+        margin:0% 5% 0% 5%;
+    }
+    .things{
+        width:50%;
+        margin:5% 5% 0% 5%;
+    }
+    table{
+        width: 180%;
+    }
+    td{
+        display:block;
+        margin-bottom:1%;
+    }
+    .projects-content{
+        padding-top:18%;
+    }
+}
+/*----------------------------MOBIL COZUNURLUK------------------------------*/
+@media only screen and (max-width:600px){
+    body{
+        background-image:linear-gradient(90deg,rgb(18, 18, 20) 40%,rgb(25, 25, 27));
+    }
+    nav{
+        background-color: rgb(18, 18, 20);
+        height:10%;
+        box-shadow: 0px 10px 15px rgb(10, 10, 12);
+    }
+    button.home{
+        width:34%;
+        margin-right: 16%;
+        margin-top:6%;
+    }
+    button.projects{
+        width:34%;
+        margin-right: 0%;
+        margin-top:6%;
+    }
+    .whoami{
+        width:90%;
+        color:rgb(192, 192, 192);
+        margin:10% 0% 0% 5%;
+        float:left;
+    }
+    .contact{
+        width:90%;
+        color:rgb(192, 192, 192);
+        margin:10% 0% 0% 5%;
+        float:left;
+    }
+    .things{
+        width:90%;
+        color:rgb(192, 192, 192);
+        margin:10% 0% 0% 5%; 
+        float:left;
+    }
+    td{
+        display:block;
+        margin-bottom:2%;
+    }
+    table{
+        width:100%;
+    }
+    .projects-content{
+        padding-top:35%;
+    }
+}
