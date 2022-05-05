@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth w-screen h-full">
+
+<head>
+    <!--LogRocket Dashboard-->
+    <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>window.LogRocket && window.LogRocket.init('k30tru/lordgwynorg');</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-black w-screen h-full overflow-x-hidden">
+    <div
+        class="fixed z-10 top-0 w-screen h-[0.5%] bg-400% animate-sidetoside bg-gradient-to-r from-[#ef32d9] via-[#89fffd] to-[#ef32d9]">
+    </div>
+    <!--navigation bar starts-->
+    <nav
+        class="flex text-white w-screen min-w-screen bg-black opacity-95 min-h-[100px] shadow-md shadow-black fixed top-1 z-50">
+        <!--photo and fullname starts-->
+        <div class="flex items-center italic ml-[12%] font-bold md:ml-[5%]"><img
+                class="sm:hidden opacity-90 mr-5 rounded-full border-2 border-white" width="70" height="70"
+                src="system_images/mehmetalikocal.jpg" alt="Mehmet Ali KOÇAL"
+                onclick="window.open('system_images/mehmetalikocal.jpg')">Mehmet Ali KOÇAL
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+        <!--photo and fullname ends-->
+        <!--button container starts-->
+        <label for="toggleMenu" class="cursor-pointer xl:hidden right-0 absolute mr-[7%] top-[30%]"><svg
+                xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd" />
+            </svg></label>
+        <input type="checkbox" id="toggleMenu" class="hidden">
+        <div id="menu"
+            class="hidden border-gray-800 border-l-2 border-b-2 xl:border-none bg-black xl:bg-transparent lg:w-[25%] md:w-[35%] sm:w-[50%] lg:leading-[96px] items-center justify-center xl:justify-end xl:flex lg:flex-col xl:flex-row right-0 absolute xl:-mt-4 xl:w-[45%] msm:w-[60%] xs:w-[65%] h-96 xl:h-32 lg:mt-[100px] xl:pr-[7%]">
+            <!--homepage button starts-->
+            <div class="transition duration-300 xl:w-16 lg:w-full lg:hover:bg-gray-800 xl:hover:bg-transparent">
+                <div class="xl:bg-slate-700 lg:bg-transparent lg:shadow-none w-full xl:w-10 xl:h-2.5 xl:pl-2 xl:hover:w-21 xl:hover:shadow-white xl:shadow-md xl:hover:mb-2"
+                    style="transition:width 200ms, box-shadow 450ms,margin 400ms;">
+                    <button
+                        class="xl:-mt-3 font-bold xl:absolute lg:border-b-gray-800 lg:border-b lg:w-full xl:w-fit xl:border-none"
+                        onclick="scrollToTop()">Anasayfa</button>
+                </div>
+            </div>
+            <!--homepage button ends-->
+            <!--about me button starts-->
+            <div
+                class="transition duration-300 xl:w-16 lg:w-full xl:mx-14 lg:hover:bg-gray-800 xl:hover:bg-transparent">
+                <div class="xl:bg-slate-700 lg:bg-transparent lg:shadow-none w-full xl:w-10 xl:h-2.5 xl:pl-2 xl:hover:w-23 xl:hover:shadow-white xl:shadow-md xl:hover:mb-2"
+                    style="transition:width 200ms, box-shadow 450ms,margin 400ms;">
+                    <button
+                        class="xl:-mt-3 font-bold xl:absolute lg:border-b-gray-800 lg:border-b lg:w-full xl:w-fit xl:border-none"
+                        onclick="document.getElementById('aboutme').scrollIntoView()">Hakkımda</button>
+                </div>
+            </div>
+            <!--about me button ends-->
+            <!--skills button starts-->
+            <div
+                class="transition duration-300 xl:w-16 lg:w-full xl:mr-14 lg:hover:bg-gray-800 xl:hover:bg-transparent">
+                <div class="xl:bg-slate-700 lg:bg-transparent lg:shadow-none w-full xl:w-10 xl:h-2.5 xl:pl-2 xl:hover:w-24 xl:hover:shadow-white xl:shadow-md xl:hover:mb-2"
+                    style="transition:width 200ms, box-shadow 450ms,margin 400ms;">
+                    <button
+                        class="xl:-mt-3 font-bold xl:absolute lg:border-b-gray-800 lg:border-b lg:w-full xl:w-fit xl:border-none"
+                        onclick="document.getElementById('skills').scrollIntoView()">Yetenekler</button>
+                </div>
+            </div>
+            <!--skills button ends-->
+            <!--contact button starts-->
+            <div class="transition duration-300 xl:w-16 lg:w-full lg:hover:bg-gray-800 xl:hover:bg-transparent">
+                <div class="xl:bg-slate-700 lg:bg-transparent lg:shadow-none w-full xl:w-10 xl:h-2.5 xl:pl-2 xl:hover:w-17 xl:hover:shadow-white xl:shadow-md xl:hover:mb-2"
+                    style="transition:width 200ms, box-shadow 450ms,margin 400ms;">
+                    <button class="xl:-mt-3 font-bold xl:absolute lg:w-full xl:w-fit"
+                        onclick="document.getElementById('contact').scrollIntoView()">İletişim</button>
+                </div>
+            </div>
+            <!--contact button ends-->
+        </div>
+        <!--button container ends-->
+    </nav>
+    <!--navigation bar ends-->
+    <!--upper page starts-->
+    <div class="h-[105px] w-full bg-black"></div>
+    <section id="upperPage"
+        class="bg-[url('system_images/bgfhd.webp')] w-screen xs:h-[60%] h-[100vh] bg-cover bg-fixed">
+        <div class="w-screen h-[calc(100vh-100px)] fixed">
+            <div id="hello"
+                style="text-shadow:0 0 40px black, 0 0 40px black, 0 0 40px black, 0 0 40px black, 0 0 40px black"
+                class="text-[150px] xs:text-[60px] sm:text-[80px] md:text-[120px] flex justify-center items-center absolute animate-textFocusIn w-full h-[calc(100vh-170px)] xs:h-[60%] text-slate-300 font-bold italic">
+                merhaba.
+            </div>
+            <div id="arrow" class="xs:mb-[15%] w-screen h-fit xs:h-[60%] flex justify-center bottom-0 absolute"><img
+                    onclick="document.getElementById('aboutme').scrollIntoView()" src="system_images/down-arrow.svg"
+                    alt="Scroll Down Icon"
+                    class="w-[70px] xs:w-[40px] invert animate-bounce xs:animate-bouncemd cursor-pointer">
+            </div>
+        </div>
+    </section>
+    <!--upper page ends-->
+    <!--lower page starts-->
+    <section id="aboutme" style="box-shadow:0 0 40px black, 0 0 40px black, 0 0 40px black, 0 0 40px black"
+        class="w-full h-fit absolute bg-black">
+        <!--page parts starts-->
+        <!--middle of the webpage starts-->
+        <section id="whoami"
+            class="sm:pt-[5%] w-full h-fit min-h-[100vh] px-[15%] lg:px-[6%] md:px-0 justify-center items-center flex flex-col">
+            <!--who am i info box starts-->
+            <div
+                class="text-6xl sm:text-4xl xs:text-xl flex mx-auto justify-center items-center h-20 rounded-lg w-fit xs:h-fit xs:px-6 xs:py-3 px-10 text-black bg-slate-200 font-bold">
+                BEN KİMİM?
+            </div>
+            <div class="relative px-[20%] md:px-[10%] sm:px-[5%] pt-[1%] md:pt-[3%] sm:pt-[5%] w-full text-center">
+                <div id="autoType"
+                    class="font-mono text-center text-xl xs:text-base font-bold pt-10 text-slate-200 border-solid inline">
+                </div>
+                <div onclick="replay()" class="hover:cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-7 w-7 absolute right-10 mt-[2%] mr-[20%] bg-slate-200 rounded-sm" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div onclick="fastForward()" class="hover:cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-7 w-7 absolute right-0 mt-[2%] mr-[20%] bg-slate-200 rounded-sm" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path
+                            d="M4.555 5.168A1 1 0 003 6v8a1 1 0 001.555.832L10 11.202V14a1 1 0 001.555.832l6-4a1 1 0 000-1.664l-6-4A1 1 0 0010 6v2.798l-5.445-3.63z" />
+                    </svg>
+                </div>
+            </div>
+            <!--who am i info box ends-->
+        </section>
+        <div style="filter: drop-shadow(0px -10px 0px rgb(136, 136, 136))">
+            <section id="skills" class="w-full h-fit bg-slate-200 px-[5%] md:px-[0%] pb-[20%] sm:mt-[20%]">
+                <!--skills info box starts-->
+                <div class="mb-[8%] msm:-mb-[4%] pt-[10%] pb-6 flex justify-center items-center">
+                    <div class="h-fit py-10 msm:pt-32 w-full text-center">
+                        <div class="text-black text-9xl sm:text-8xl font-bold msm:text-6xl"
+                            style="filter:drop-shadow(0 0 3px black)">ALET</div>
+                        <div class="min-w-fit text-slate-200 bg-black text-8.5xl msm:text-6xl sm:text-8xl font-bold msm:pb-3 pb-6"
+                            style="box-shadow: 0 0 7px black">
+                            ÇANTAM</div>
+                    </div>
+                </div>
+                <div class="w-full h-fit flex flex-wrap justify-center items-center msm:hidden">
+
+                    <div class="bg-slate-300 w-60 h-96 rounded-xl m-10 md:my-10 md:mx-4 flex-shrink-0"
+                        style="box-shadow:0 0 5px gray">
+                        <div class="rounded-full w-24 h-24 bg-slate-400 -mt-12 ml-[72px] absolute items-center justify-center flex"
+                            style="box-shadow:0 0 5px gray">
+                            <svg class="h-16 w-16 border-[10px] border-slate-200 rounded-full bg-slate-200"
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                            </svg>
+                        </div>
+                        <div class="ml-[85px] flex mt-16"><img src="system_images/adobe-photoshop.svg" width="70px"
+                                height="70px" alt="" style="filter:drop-shadow(0 0 3px gray)">
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-4">Adobe Photoshop</div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-6">- Kullanım Amacı -</div>
+                        <div class="px-5 py-1 text-center">Fotoğrafları editlemek veya buton, simge, logo tasarımı
+                            yapmak
+                            için kullandığım yazılım.</div>
+                    </div>
+
+                    <div class="bg-slate-300 w-60 h-96 rounded-xl m-10 md:my-10 md:mx-4 flex-shrink-0"
+                        style="box-shadow:0 0 5px gray">
+                        <div class="rounded-full w-24 h-24 bg-slate-400 -mt-12 ml-[72px] absolute items-center justify-center flex"
+                            style="box-shadow:0 0 5px gray"> <svg
+                                class="h-16 w-16 border-[10px] border-slate-200 rounded-full bg-slate-200"
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                            </svg></div>
+                        <div class="ml-[85px] flex mt-16"><img src="system_images/adobe-premiere-pro.svg" width="70px"
+                                height="70px" alt="" style="filter:drop-shadow(0 0 3px gray)">
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-4">Adobe Premiere Pro</div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-6">- Kullanım Amacı -</div>
+                        <div class="px-5 py-1 text-center">Videoları veya hareketleri resimleri editlemek ya da
+                            ihtiyacıma
+                            uygun videolar oluşturmak için kullandığım yazılım.</div>
+                    </div>
+
+                    <div class="bg-slate-300 w-60 h-96 rounded-xl m-10 md:my-10 md:mx-4 flex-shrink-0"
+                        style="box-shadow:0 0 5px gray">
+                        <div class="rounded-full w-24 h-24 bg-slate-400 -mt-12 ml-[72px] absolute items-center justify-center flex"
+                            style="box-shadow:0 0 5px gray"> <svg
+                                class="h-16 w-16 border-[10px] border-slate-200 rounded-full bg-slate-200"
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                            </svg></div>
+                        <div class="ml-[85px] flex mt-16"><img src="system_images/adobe-after-effects.svg" width="70px"
+                                height="70px" alt="" style="filter:drop-shadow(0 0 3px gray)">
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-4">Adobe After Effects
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-6">- Kullanım Amacı -</div>
+                        <div class="px-5 py-1 text-center">Videolara görsel efekt eklemek veya ihtiyacıma göre motion
+                            graphic (hareketli animasyon) oluşturmak için kullandığım yazılım.</div>
+                    </div>
+
+                    <div class="bg-slate-300 w-60 h-96 rounded-xl m-10 md:my-10 md:mx-4 flex-shrink-0"
+                        style="box-shadow:0 0 5px gray">
+                        <div class="rounded-full w-24 h-24 bg-slate-400 -mt-12 ml-[72px] absolute items-center justify-center flex"
+                            style="box-shadow:0 0 5px gray">
+                            <svg class="h-16 w-16 border-[10px] border-slate-200 rounded-full bg-slate-200"
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="ml-[85px] flex mt-16"><img src="system_images/html-5.svg" width="70px" height="70px"
+                                alt="" style="filter:drop-shadow(0 0 3px gray)">
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-4">HTML 5</div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-6">- Kullanım Amacı -</div>
+                        <div class="px-5 py-1 text-center">Web sitelerinin iskeletini ve içeriğini oluşturup
+                            düzenlediğim
+                            işaretleme dili.</div>
+                    </div>
+
+                    <div class="bg-slate-300 w-60 h-96 rounded-xl m-10 md:my-10 md:mx-4 flex-shrink-0"
+                        style="box-shadow:0 0 5px gray">
+                        <div class="rounded-full w-24 h-24 bg-slate-400 -mt-12 ml-[72px] absolute items-center justify-center flex"
+                            style="box-shadow:0 0 5px gray"><svg
+                                class="h-16 w-16 border-[10px] border-slate-200 rounded-full bg-slate-200"
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg></div>
+                        <div class="ml-[85px] flex mt-16"><img src="system_images/css-3.svg" width="70px" height="70px"
+                                alt="" style="filter:drop-shadow(0 0 3px gray)">
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-4">CSS 3</div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-6">- Kullanım Amacı -</div>
+                        <div class="px-5 py-1 text-center">İskeletini oluşturduğum web sitelerine görsel tarzlar
+                            kazandırmak
+                            ve daha iyi görünmelerini sağlamak için kullandığım işaretleme dili.</div>
+                    </div>
+
+                    <div class="bg-slate-300 w-60 h-96 rounded-xl m-10 md:my-10 md:mx-4 flex-shrink-0"
+                        style="box-shadow:0 0 5px gray">
+                        <div class="rounded-full w-24 h-24 bg-slate-400 -mt-12 ml-[72px] absolute items-center justify-center flex"
+                            style="box-shadow:0 0 5px gray">
+                            <svg class="h-16 w-16 border-[10px] border-slate-200 rounded-full bg-slate-200"
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                            </svg>
+                        </div>
+                        <div class="ml-[85px] flex mt-21.5"><img src="system_images/tailwind-css.svg" width="70px"
+                                height="70px" alt="" style="filter:drop-shadow(0 0 3px gray)">
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-7">Tailwind CSS</div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-6">- Kullanım Amacı -</div>
+                        <div class="px-5 py-1 text-center">CSS yazmayı ve web sitelerine stil vermeyi kolaylaştıran bir
+                            framework.</div>
+                    </div>
+
+                    <div class="bg-slate-300 w-60 h-96 rounded-xl m-10 md:my-10 md:mx-4 flex-shrink-0"
+                        style="box-shadow:0 0 5px gray">
+                        <div class="rounded-full w-24 h-24 bg-slate-400 -mt-12 ml-[72px] absolute items-center justify-center flex"
+                            style="box-shadow:0 0 5px gray"><svg
+                                class="h-16 w-16 border-[10px] border-slate-200 rounded-full bg-slate-200"
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg></div>
+                        <div class="ml-[85px] flex mt-16"><img src="system_images/javascript.svg" width="70px"
+                                height="70px" alt="" style="filter:drop-shadow(0 0 3px gray)">
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-4">Javascript</div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-6">- Kullanım Amacı -</div>
+                        <div class="px-5 py-1 text-center">Web sitelerini interaktif hale getirmek ve web sitelerindeki
+                            otomasyon işlemlerini oluşturabilmek için kullandığım programlama dili.</div>
+                    </div>
+
+                    <div class="bg-slate-300 w-60 h-96 rounded-xl m-10 md:my-10 md:mx-4 flex-shrink-0"
+                        style="box-shadow:0 0 5px gray">
+                        <div class="rounded-full w-24 h-24 bg-slate-400 -mt-12 ml-[72px] absolute items-center justify-center flex"
+                            style="box-shadow:0 0 5px gray"> <svg
+                                class="h-16 w-16 border-[10px] border-slate-200 rounded-full bg-slate-200"
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                            </svg></div>
+                        <div class="ml-[85px] flex mt-16"><img src="system_images/mysql.svg" width="70px" height="70px"
+                                alt="" style="filter:drop-shadow(0 0 3px gray)">
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-4">MySQL</div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-6">- Kullanım Amacı -</div>
+                        <div class="px-5 py-1 text-center">Veri tabanı oluşturmak ve düzenlemek için kullandığım
+                            yazılım.
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-300 w-60 h-96 rounded-xl m-10 md:my-10 md:mx-4 flex-shrink-0"
+                        style="box-shadow:0 0 5px gray">
+                        <div class="rounded-full w-24 h-24 bg-slate-400 -mt-12 ml-[72px] absolute items-center justify-center flex"
+                            style="box-shadow:0 0 5px gray"><svg
+                                class="h-16 w-16 border-[10px] border-slate-200 rounded-full bg-slate-200"
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg></div>
+                        <div class="ml-[85px] flex mt-16"><img src="system_images/csharp.svg" width="70px" height="70px"
+                                alt="" style="filter:drop-shadow(0 0 3px gray)">
+                        </div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-4">C Sharp</div>
+                        <div class="text-gray-500 opacity-60 font-bold w-full text-center mt-6">- Kullanım Amacı -</div>
+                        <div class="px-5 py-1 text-center">Windows Forms (Masaüstü) uygulamaları oluşturmak için
+                            kullandığım
+                            programlama dili.</div>
+                    </div>
+                </div>
+                <div class="hidden msm:block w-[90%] msm:mx-auto h-fit drop-shadow-md mb-8">
+                    <div class="flex laptop-2xs:block">
+                        <div
+                            class="border-l-8 border-solid border-green-400 flex items-center w-[33%] laptop-2xs:w-[100%] mr-2 h-[50px] bg-slate-300 rounded-md">
+                            <img class="w-[50px] mr-2" src="./system_images/adobe-premiere-pro.svg"
+                                alt="Adobe Premiere Pro">
+                            Adobe
+                            Premiere Pro
+                        </div>
+                        <div
+                            class="border-l-8 border-solid laptop-2xs:my-3 border-green-400 flex items-center w-[33%] laptop-2xs:w-[100%] mr-2 h-[50px] bg-slate-300 rounded-md">
+                            <img class="w-[50px] mr-2" src="./system_images/adobe-after-effects.svg"
+                                alt="Adobe After Effects">
+                            Adobe After Effects
+                        </div>
+                        <div
+                            class="border-l-8 border-solid border-green-400 flex items-center w-[33%] laptop-2xs:w-[100%] h-[50px] bg-slate-300 rounded-md">
+                            <img class="w-[50px] mr-2" src="./system_images/adobe-photoshop.svg" alt="Adobe Photoshop">
+                            Adobe
+                            Photoshop
+                        </div>
+                    </div>
+                    <div class="flex my-1 laptop-2xs:block">
+                        <div
+                            class="border-l-8 border-solid laptop-2xs:my-3 border-green-400 flex items-center w-[33%] laptop-2xs:w-[100%] mr-2 h-full my-1 bg-slate-300 rounded-md">
+                            <img class="w-[50px] mr-2" src="./system_images/html-5.svg" alt="HTML 5">
+                            HTML 5
+                        </div>
+                        <div
+                            class="border-l-8 border-solid border-green-400 flex items-center w-[33%] laptop-2xs:w-[100%] mr-2 h-[50px] my-1 bg-slate-300 rounded-md">
+                            <img class="w-[50px] mr-2" src="./system_images/css-3.svg" alt="CSS 3"> CSS 3
+                        </div>
+                        <div
+                            class="border-l-8 border-solid laptop-2xs:my-3 border-green-400 flex items-center w-[33%] laptop-2xs:w-[100%] h-[50px] my-1 bg-slate-300 rounded-md">
+                            <img class="w-[50px] mr-2" src="./system_images/javascript.svg" alt="Javascript">
+                            Javascript
+                        </div>
+                    </div>
+                    <div class="flex laptop-2xs:block">
+                        <div
+                            class="border-l-8 border-solid border-green-400 flex items-center w-[33%] laptop-2xs:w-[100%] mr-2 h-[50px] bg-slate-300 rounded-md">
+                            <img class="w-[50px] mr-2 ml-1" src="./system_images/tailwind-css.svg" alt="Tailwind CSS">
+                            Tailwind CSS
+                        </div>
+                        <div
+                            class="border-l-8 border-solid laptop-2xs:my-3 border-green-400 flex items-center w-[33%] laptop-2xs:w-[100%] mr-2 h-[50px] bg-slate-300 rounded-md">
+                            <img class="w-[50px] mr-2 ml-1 mysql" src="./system_images/mysql.svg" alt="MySQL"> MySQL
+                        </div>
+                        <div
+                            class="border-l-8 border-solid border-green-400 flex items-center w-[33%] laptop-2xs:w-[100%] h-[50px] bg-slate-300 rounded-md">
+                            <img class="w-[50px] mr-2 ml-0" src="./system_images/csharp.svg" alt="C#">
+                            C#
+                        </div>
+                    </div>
+                </div>
+                <!--skills info box ends-->
+            </section>
+        </div>
+        <!--middle of the webpage ends-->
+        <div style="filter: drop-shadow(0px -10px 0px rgb(70, 70, 70))">
+            <section id="contact" class="w-full h-fit -mt-[10%] min-h-screen bg-black px-[5%] pb-[10%]">
+                benimle iletişim kur
+            </section>
+        </div>
+        <!--page parts ends-->
+    </section>
+    <!--lower page ends-->
+    <div class="hidden text-white">"İsmim Mehmet Ali, 21 yaşındayım ve Recep Tayyip Erdoğan Üniversitesi'nde bilgisayar
+        programcılığı bölümü öğrencisiyim. Üniversitemde web tasarım, grafik animasyon ve görsel düzenleme, veri tabanı
+        ve C# ile nesne tabanlı programlama eğitimleri görüyorum. Bunlardan bağımsız olarak web siteleri için seo (arama
+        motoru optimizasyonu) çalışmaları ve çeşitli framework'lerin kullanımıyla ileri düzey website geliştirme
+        konuları üzerinde kendimi geliştirmeye çalışıyorum."</div>
+</body>
+
+<style>
+    #toggleMenu:checked+#menu {
+        display: block;
+        opacity: 1;
+    }
+
+    #skills {
+        clip-path: polygon(50% 30px, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    }
+
+    #contact {
+        clip-path: polygon(50% 30px, 55% 0, 100% 0, 100% 100%, 0 100%, 0 0, 45% 0);
+    }
+
+    @media (max-width:400px) {
+        #skills {
+            clip-path: polygon(50% 10px, 75% 0, 100% 0, 100% 100%, 0 100%, 0 0, 25% 0);
+        }
+
+        #contact {
+            clip-path: polygon(50% 30px, 75% 0, 100% 0, 100% 100%, 0 100%, 0 0, 25% 0);
+        }
+    }
+
+    @media (max-width:650px) {
+        #skills {
+            clip-path: polygon(50% 30px, 65% 0, 100% 0, 100% 100%, 0 100%, 0 0, 35% 0);
+        }
+
+        #contact {
+            clip-path: polygon(50% 30px, 65% 0, 100% 0, 100% 100%, 0 100%, 0 0, 35% 0);
+        }
+    }
+
+    @media(max-width:1024px) {
+        #skills {
+            clip-path: polygon(50% 30px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        }
+
+        #contact {
+            clip-path: polygon(50% 30px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
+        }
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    let text = document.getElementById('hello');
+    let arrow = document.getElementById('arrow');
+    let upperPage = document.getElementById('upperPage');
+    window.addEventListener('scroll', function () {
+        let value = window.scrollY;
+        text.style.top = value * 0.50 + 'px';
+        arrow.style.bottom = -value * 0.50 + 'px';
+        upperPage.style.filter = 'blur(' + value * 0.0085 + 'px)';
+        whoami.style.top = -value * 0.5 + 'px';
+    })
+
+    let autoType = new Typed('#autoType', {
+        strings: [' ', 'İsmim Mehmet Ali,^900 21 yaşındayım ve Recep Tayyip Erdoğan Üniversitesi\'nde bilgisayar programcılığı bölümü öğrencisiyim.^1000 Üniversitemde web tasarım,^300 grafik animasyon ve görsel düzenleme^300, veri tabanı^300 ve C# ile nesne tabanlı programlama eğitimleri görüyorum.^1000 Bunlardan bağımsız olarak web siteleri için seo (arama motoru optimizasyonu) araştırmaları yapıyor ve farklı framework\'lerin kullanımını öğrenme vasıtasıyla ileri düzey websiteleri tasarlama üzerine kendimi geliştirmeye çalışıyorum.^1500 👋^500😊'],
+        typeSpeed: 35,
+        backSpeed: 0,
+    })
+
+    function fastForward() {
+        autoType.typeSpeed = 0;
+    }
+    function replay() {
+        window.location.reload();
+    }
+</script>
+<style>
+    .typed-cursor {
+        color: white;
+        background-color: white;
+    }
+</style>
+
+</html>
